@@ -1,4 +1,7 @@
 <?php
+
+echo "CodeIginter"; exit;
+
 /**
  * CodeIgniter
  *
