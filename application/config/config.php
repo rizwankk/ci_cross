@@ -283,7 +283,9 @@ $config['error_views_path'] = '';
 | application/cache/ directory.  Use a full server path with trailing slash.
 |
 */
-$config['cache_path'] = getenv('OPENSHIFT_DATA_DIR') . 'storage/framework/cache';;
+$config['cache_path'] = '';
+
+//getenv('OPENSHIFT_DATA_DIR') . 'storage/framework/cache';
 
 /*
 |--------------------------------------------------------------------------
@@ -370,10 +372,12 @@ $config['encryption_key'] =  getenv('CI_KEY');
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = getenv('OPENSHIFT_DATA_DIR') . 'storage/framework/sessions';
+$config['sess_save_path'] = '';
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
+
+//getenv('OPENSHIFT_DATA_DIR') . 'storage/framework/sessions'
 
 /*
 |--------------------------------------------------------------------------
