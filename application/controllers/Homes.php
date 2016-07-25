@@ -6,7 +6,7 @@ class Homes extends CI_Controller {
     public function __construct()
     {
             parent::__construct();
-            $this->load->model('user');
+            $this->load->model('user_model');
             $this->load->helper('url_helper');
             $this->load->library('unit_test');
             $this->load->library('session');
@@ -54,7 +54,7 @@ class Homes extends CI_Controller {
     }
     
     public function is_user($email, $pass) {
-        $value = $this->user->is_user($email, $pass);
+        $value = $this->user_model->is_user($email, $pass);
         return $value;
     }
 
@@ -73,7 +73,7 @@ class Homes extends CI_Controller {
     }
     
     public function user_data($user_id) {
-        $data = $this->user->get_user_news_article($user_id);
+        $data = $this->user_model->get_user_news_article($user_id);
         return $data;
     }
         
